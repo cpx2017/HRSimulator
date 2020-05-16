@@ -53,50 +53,50 @@
                         </div>
                     </div>
 
-                        <ul>
-                            <li class="menu-title">เมนู</li>
+                    <ul>
+                        <li class="menu-title">เมนู</li>
 
-                            <li>
-                                <a href="/Home/Home" class="waves-effect"><i class="mdi mdi-home"></i><span> หน้าหลัก </span></a>
-                            </li>
+                        <li>
+                            <a href="/Home/Home" class="waves-effect"><i class="mdi mdi-home"></i><span> หน้าหลัก </span></a>
+                        </li>
 
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-check"></i> <span> ข้อมูลตำแหน่งงาน </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="/Job/Add">เพิ่มชื่อตำแหน่งงาน</a></li>
-                                    <li><a href="#">แก้ไขชื่อตำแหน่งงาน</a></li>
-                                </ul>
-                            </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-check"></i> <span> ข้อมูลตำแหน่งงาน </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="/Job/Add">เพิ่มชื่อตำแหน่งงาน</a></li>
+                                <li><a href="/Job/Edit">แก้ไขชื่อตำแหน่งงาน</a></li>
+                            </ul>
+                        </li>
 
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-multiple"></i> <span> ข้อมูลแผนก </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">เพิ่มชื่อแผนกงาน</a></li>
-                                    <li><a href="#">แก้ไขชื่อแผนกงาน</a></li>
-                                </ul>
-                            </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-multiple"></i> <span> ข้อมูลแผนก </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="#">เพิ่มชื่อแผนกงาน</a></li>
+                                <li><a href="#">แก้ไขชื่อแผนกงาน</a></li>
+                            </ul>
+                        </li>
 
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i> <span> ข้อมูลพนักงาน </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">รายชื่อพนักงาน</a></li>
-                                    <li><a href="#">เพิ่มข้อมูลพนักงาน</a></li>
-                                    <li><a href="#">แก้ไขข้อมูลพนักงาน</a></li>
-                                    <li><a href="#">เปลี่ยนสถานะลาออกของพนักงาน</a></li>
-                                </ul>
-                            </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i> <span> ข้อมูลพนักงาน </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="#">รายชื่อพนักงาน</a></li>
+                                <li><a href="#">เพิ่มข้อมูลพนักงาน</a></li>
+                                <li><a href="#">แก้ไขข้อมูลพนักงาน</a></li>
+                                <li><a href="#">เปลี่ยนสถานะลาออกของพนักงาน</a></li>
+                            </ul>
+                        </li>
 
-                            <li>
-                                <a href="calendar.html" class="waves-effect"><i class="mdi mdi-note-plus"></i><span> ข้อมูลการลา </span></a>
-                            </li>
+                        <li>
+                            <a href="calendar.html" class="waves-effect"><i class="mdi mdi-note-plus"></i><span> ข้อมูลการลา </span></a>
+                        </li>
 
-                            <li>
-                                <a href="calendar.html" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> บันทึกเวลาเข้า-เลิกงาน </span></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div> <!-- end sidebarinner -->
+                        <li>
+                            <a href="calendar.html" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> บันทึกเวลาเข้า-เลิกงาน </span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- end sidebarinner -->
         </div>
 
         <div class="content-page">

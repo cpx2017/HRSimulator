@@ -18,8 +18,8 @@
     
 
     if (day >= 1 && day <= 5) {
-        var startTime = '8:30 AM';
-        var endTime = '5:30 PM';
+        var startTime = '8:30:00 AM';
+        var endTime = '5:30:00 PM';
         var now = new Date();
 
         var startDate = dateObj(startTime); // get date objects
@@ -100,4 +100,32 @@
             )
         }
     })
+
+    var i = 0;
+    if (i == 0) {
+        $(document).bind("contextmenu", function (e) {
+            swal(
+                {
+                    text: 'Right-Click was disabled from this site for system security reason. To Cut, Copy or Paste any text Please use following shortcut (Ctrl + X), (Ctrl + C) or (Ctrl + V).',
+                    type: 'info',
+                    showCancelButton: false,
+                    confirmButtonClass: 'btn btn-success'
+                }
+            )
+            e.preventDefault();
+        });
+        $(document).keydown(function (e) {
+            if (e.which === 123) {
+                swal(
+                    {
+                        text: 'Inspect Element was disabled from this site for system security reason.',
+                        type: 'info',
+                        showCancelButton: false,
+                        confirmButtonClass: 'btn btn-success'
+                    }
+                )
+                return false;
+            }
+        });
+    }
 }

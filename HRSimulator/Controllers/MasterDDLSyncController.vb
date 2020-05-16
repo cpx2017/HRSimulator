@@ -9,10 +9,14 @@ Namespace Controllers
         Public dbCon As New MySqlConnection("datasource=remotemysql.com;port=3306;username=5XBTr0keKh;password=Qirn3jsE82;database=5XBTr0keKh")
 
         <HttpPost>
-        Function JobDDLFunc(ByVal data As Integer) As JsonResult
-
+        Function JobDDLFunc(data As JobHeadDDL) As List(Of JobHeadDDL)
+            Dim list_data As New List(Of JobHeadDDL)
             Dim getJob As JobHeadDDL
-            If data = 1 Then
+            Dim getJobList As JobHeadDDL = New JobHeadDDL With {
+                .action = data.action
+            }
+
+            If getJobList.action = 1 Then
                 dbCon.Open()
                 Dim cmdSelect As New MySqlCommand
                 Dim genAdapt As MySqlDataAdapter = New MySqlDataAdapter()
@@ -25,19 +29,19 @@ Namespace Controllers
                 If genDS.Tables("table").Rows.Count > 0 Then
                     Dim dr As DataRow
 
-                    For Each dr In genDS.Tables("lookup").Rows
+                    For Each dr In genDS.Tables("table").Rows
+                        getJob = New JobHeadDDL
                         getJob.code = dr("code").ToString
                         getJob.JobName = dr("JobName").ToString
+                        list_data.Add(getJob)
                     Next
-                    getJob.errorcode = 0
                     dbCon.Close()
                 Else
-                    getJob.errorcode = 1
                     dbCon.Close()
                 End If
 
             End If
-            Return Json(getJob, JsonRequestBehavior.AllowGet)
+            Return list_data
         End Function
 
         Function DepartDDLFunc(ByVal data As String) As Integer
@@ -87,6 +91,7 @@ Namespace Controllers
         Public Class JobHeadDDL
             Public Property code As String
             Public Property JobName As String
+            Public Property action As Integer
 
             Public Property errorcode As Integer
         End Class
@@ -94,6 +99,7 @@ Namespace Controllers
             Public Property JobCode As String
             Public Property DepartCode As String
             Public Property DepartName As String
+            Public Property action As Integer
 
             Public Property errorcode As Integer
         End Class

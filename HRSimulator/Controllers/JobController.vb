@@ -2,7 +2,6 @@
 Imports HRSimulator.JobHeadModel
 Imports MySql.Data.MySqlClient
 Imports HRSimulator.JSON
-Imports HRSimulator.CallbackException
 Imports Newtonsoft.Json
 
 Namespace Controllers

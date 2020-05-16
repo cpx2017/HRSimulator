@@ -80,13 +80,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/HRSimulator.dll">
-      <publishTime>05/15/2020 17:06:01</publishTime>
+      <publishTime>05/16/2020 18:49:19</publishTime>
     </File>
     <File Include="bin/HRSimulator.pdb">
-      <publishTime>05/15/2020 17:06:01</publishTime>
+      <publishTime>05/16/2020 18:49:19</publishTime>
     </File>
     <File Include="bin/HRSimulator.xml">
-      <publishTime>05/15/2020 17:06:01</publishTime>
+      <publishTime>05/16/2020 18:49:17</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -325,6 +325,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/System/css/responsive.bootstrap4.min.css">
       <publishTime>05/11/2020 12:27:58</publishTime>
     </File>
+    <File Include="Content/System/css/select2.min.css">
+      <publishTime>05/15/2020 17:42:59</publishTime>
+    </File>
     <File Include="Content/System/css/sweetalert2.min.css">
       <publishTime>05/05/2020 16:20:01</publishTime>
     </File>
@@ -385,6 +388,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/System/js/responsive.bootstrap4.min.js">
       <publishTime>05/11/2020 12:31:08</publishTime>
     </File>
+    <File Include="Content/System/js/select2.min.js">
+      <publishTime>05/15/2020 17:42:35</publishTime>
+    </File>
     <File Include="Content/System/js/skycons.min.js">
       <publishTime>07/25/2015 04:47:40</publishTime>
     </File>
@@ -415,11 +421,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Job/Add.vbhtml">
       <publishTime>05/14/2020 18:31:44</publishTime>
     </File>
+    <File Include="Views/Job/Edit.vbhtml">
+      <publishTime>05/16/2020 15:33:59</publishTime>
+    </File>
     <File Include="Views/Shared/Error.vbhtml">
       <publishTime>05/05/2020 13:58:13</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.vbhtml">
-      <publishTime>05/15/2020 16:36:29</publishTime>
+      <publishTime>05/15/2020 17:50:04</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>05/05/2020 13:58:13</publishTime>
@@ -430,14 +439,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="ViewScript/dateObj.js">
       <publishTime>05/09/2020 16:48:42</publishTime>
     </File>
+    <File Include="ViewScript/DDLSync.js">
+      <publishTime>05/16/2020 17:41:10</publishTime>
+    </File>
     <File Include="ViewScript/EmployeeList.js">
       <publishTime>05/11/2020 12:54:28</publishTime>
     </File>
     <File Include="ViewScript/JobAdd.js">
-      <publishTime>05/14/2020 18:21:46</publishTime>
+      <publishTime>05/16/2020 15:42:32</publishTime>
+    </File>
+    <File Include="ViewScript/JobEdit.js">
+      <publishTime>05/15/2020 17:25:15</publishTime>
     </File>
     <File Include="ViewScript/_layout.js">
-      <publishTime>05/15/2020 16:30:51</publishTime>
+      <publishTime>05/16/2020 18:09:33</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>05/15/2020 17:04:14</publishTime>
