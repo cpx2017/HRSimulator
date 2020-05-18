@@ -9,7 +9,7 @@ Namespace Controllers
         Public dbCon As New MySqlConnection("datasource=remotemysql.com;port=3306;username=5XBTr0keKh;password=Qirn3jsE82;database=5XBTr0keKh")
 
         <HttpPost>
-        Function JobDDLFunc(data As JobHeadDDL) As List(Of JobHeadDDL)
+        Function JobDDLFunc(data As JobHeadDDL) As JsonResult
             Dim list_data As New List(Of JobHeadDDL)
             Dim getJob As JobHeadDDL
             Dim getJobList As JobHeadDDL = New JobHeadDDL With {
@@ -33,7 +33,7 @@ Namespace Controllers
                         getJob = New JobHeadDDL
                         getJob.code = dr("code").ToString
                         getJob.JobName = dr("JobName").ToString
-                        list_data.Add(getJob)
+
                     Next
                     dbCon.Close()
                 Else
@@ -41,7 +41,7 @@ Namespace Controllers
                 End If
 
             End If
-            Return list_data
+            Return Json(getJob, JsonRequestBehavior.AllowGet)
         End Function
 
         Function DepartDDLFunc(ByVal data As String) As Integer

@@ -21,10 +21,11 @@
                         'error'
                     )
                 },
-                success: function (data) {
-                    if (!data.onError) {
-                        data.getItems = jQuery.parseJSON(data.getItems);
-                        $.each((data.getItems), function (index, e) {
+                success: function (response) {
+                    alert(JSON.stringify(response));
+                    if (!response.onError) {
+                        response = jQuery.parseJSON(response);
+                        $.each((response), function (index, e) {
                             let item = $("<option/>");
                             $(item).attr("value", e.code).text(e.JobName);
                             $(ddl_id).append($(item));
