@@ -31,6 +31,7 @@ C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\roslyn\VBCSCompiler.ex
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Antlr3.Runtime.dll
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\MySql.Data.dll
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Newtonsoft.Json.dll
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\System.Net.Http.Formatting.dll
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\System.Web.Helpers.dll
@@ -56,6 +57,7 @@ C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\System.Web.WebPages.De
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\System.Web.WebPages.Razor.xml
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Antlr3.Runtime.pdb
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.vbprojAssemblyReference.cache
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.Resources.resources
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.vbproj.GenerateResource.cache
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.vbproj.CoreCompileInputs.cache
@@ -63,5 +65,3 @@ C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.vbpr
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.dll
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.xml
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.pdb
-C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.vbprojAssemblyReference.cache
-C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\MySql.Data.dll

@@ -21,7 +21,7 @@ Namespace Controllers
                 Dim cmdSelect As New MySqlCommand
                 Dim genAdapt As MySqlDataAdapter = New MySqlDataAdapter()
                 Dim genDS As New DataSet
-                cmdSelect = New MySqlCommand("select * from m_Jobhead", dbCon)
+                cmdSelect = New MySqlCommand("select code, JobName from m_Jobhead", dbCon)
 
                 genAdapt.SelectCommand = cmdSelect
 
@@ -33,7 +33,7 @@ Namespace Controllers
                         getJob = New JobHeadDDL
                         getJob.code = dr("code").ToString
                         getJob.JobName = dr("JobName").ToString
-
+                        list_data.Add(getJob)
                     Next
                     dbCon.Close()
                 Else
@@ -41,7 +41,7 @@ Namespace Controllers
                 End If
 
             End If
-            Return Json(getJob, JsonRequestBehavior.AllowGet)
+            Return Json(list_data, JsonRequestBehavior.AllowGet)
         End Function
 
         Function DepartDDLFunc(ByVal data As String) As Integer

@@ -6,7 +6,7 @@ function event_click() {
         insertJob.JobName = $('#JobName').val();
         $.busyLoadFull("show");
         $.ajax({
-            url: "/Job/insert",
+            url: "/Job/AddJob",
             data: JSON.stringify(insertJob),
             type: "POST",
             contentType: "application/json; charset=utf-8",

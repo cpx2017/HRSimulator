@@ -80,13 +80,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/HRSimulator.dll">
-      <publishTime>05/16/2020 18:49:19</publishTime>
+      <publishTime>05/18/2020 18:30:32</publishTime>
     </File>
     <File Include="bin/HRSimulator.pdb">
-      <publishTime>05/16/2020 18:49:19</publishTime>
+      <publishTime>05/18/2020 18:30:32</publishTime>
     </File>
     <File Include="bin/HRSimulator.xml">
-      <publishTime>05/16/2020 18:49:17</publishTime>
+      <publishTime>05/18/2020 18:30:32</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -185,7 +185,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/28/2018 13:04:24</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>11/28/2018 13:01:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
       <publishTime>11/28/2018 13:02:56</publishTime>
@@ -218,7 +218,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/25/2019 11:53:32</publishTime>
     </File>
     <File Include="Content/Custom/css/style.css">
-      <publishTime>05/06/2020 16:35:42</publishTime>
+      <publishTime>05/18/2020 16:47:46</publishTime>
     </File>
     <File Include="Content/Custom/css/style.css.map">
       <publishTime>06/25/2019 11:53:34</publishTime>
@@ -314,7 +314,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/07/2015 02:21:32</publishTime>
     </File>
     <File Include="Content/System/css/bootstrap.min.css">
-      <publishTime>02/13/2019 20:17:50</publishTime>
+      <publishTime>05/18/2020 16:22:12</publishTime>
     </File>
     <File Include="Content/System/css/dataTables.bootstrap4.min.css">
       <publishTime>05/11/2020 12:24:23</publishTime>
@@ -353,7 +353,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 17:15:54</publishTime>
     </File>
     <File Include="Content/System/js/fastclick.js">
-      <publishTime>01/26/2015 13:19:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/System/js/jquery.blockUI.js">
       <publishTime>08/07/2015 11:54:56</publishTime>
@@ -440,7 +440,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/09/2020 16:48:42</publishTime>
     </File>
     <File Include="ViewScript/DDLSync.js">
-      <publishTime>05/16/2020 17:41:10</publishTime>
+      <publishTime>05/18/2020 18:26:50</publishTime>
     </File>
     <File Include="ViewScript/EmployeeList.js">
       <publishTime>05/11/2020 12:54:28</publishTime>
@@ -452,7 +452,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2020 17:25:15</publishTime>
     </File>
     <File Include="ViewScript/_layout.js">
-      <publishTime>05/16/2020 18:09:33</publishTime>
+      <publishTime>05/18/2020 18:27:11</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>05/15/2020 17:04:14</publishTime>

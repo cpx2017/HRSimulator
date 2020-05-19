@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>เพิ่มตำแหน่งงาน</title>
+    <title>แก้ไขตำแหน่งงาน</title>
     <meta content="Admin Dashboard" name="description" />
     <meta content="Mannatthemes" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,10 +30,10 @@
                     <ol class="breadcrumb hide-phone p-0 m-0">
                         <li class="breadcrumb-item"><a href="#">HR Simulator</a></li>
                         <li class="breadcrumb-item"><a href="#">ข้อมูลตำแหน่งงาน</a></li>
-                        <li class="breadcrumb-item active">เพิ่มข้อมูลตำแหน่งงาน</li>
+                        <li class="breadcrumb-item active">แก้ไขข้อมูลตำแหน่งงาน</li>
                     </ol>
                 </div>
-                <h4 class="page-title">เพิ่มข้อมูลตำแหน่งงาน</h4>
+                <h4 class="page-title">แก้ไขข้อมูลตำแหน่งงาน</h4>
             </div>
         </div>
     </div>
@@ -59,6 +59,7 @@
                                                     <div class="form-group col-md-7">
                                                         <label>ตำแหน่งงานที่ต้องการแก้ไข</label>
                                                         <select class="select2 form-control" id="JobList">
+                                                            <option value="">>เลือกตำแหน่งงาน<</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -88,10 +89,11 @@
     <script src="~/Content/System/js/jquery.min.js"></script>
     <script src="~/Content/System/js/sweetalert2.min.js"></script>
     <script src="~/Content/System/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"></script>
 
     <!-- Extension Script -->
     <script src="~/ViewScript/DDLSync.js"></script>
-    <script src="~/ViewScript/JobAdd.js"></script>
+    <script src="~/ViewScript/JobEdit.js"></script>
 
     <script>
         $(document).ready(function () {

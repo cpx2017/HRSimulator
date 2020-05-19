@@ -19,10 +19,6 @@ Namespace Controllers
             Return View()
         End Function
 
-        Function getData(ByVal data As String) As Integer
-
-        End Function
-
         Function checkExist(ByVal data As String) As Integer
             dbCon.Open()
             Dim ExistCount As Integer
@@ -33,7 +29,6 @@ Namespace Controllers
             cmdSelect.Parameters.Add("@JobName", MySqlDbType.VarChar).Value = data
 
             genAdapt.SelectCommand = cmdSelect
-
 
             genAdapt.Fill(genDS, "table")
             If genDS.Tables("table").Rows.Count > 0 Then
@@ -46,7 +41,6 @@ Namespace Controllers
         End Function
 
         Function Generate_RunningCode() As String
-
             dbCon.Open()
             Dim running_code As String = ""
             Dim genAdapt As MySqlDataAdapter
@@ -80,7 +74,7 @@ Namespace Controllers
         End Function
 
         <HttpPost>
-        Public Function insert(ByVal getData As JobHeadModel) As JsonResult
+        Public Function AddJob(ByVal getData As JobHeadModel) As JsonResult
             Dim insertJob As JobHeadModel = New JobHeadModel With {
                 .JobName = getData.JobName
             }
@@ -103,18 +97,18 @@ Namespace Controllers
             Return Json(responseStat, JsonRequestBehavior.AllowGet)
         End Function
         <HttpPost>
-        Public Function update(ByVal getData As JobHeadModel) As JsonResult
-            Dim insertJob As JobHeadModel = New JobHeadModel With {
+        Public Function EditJob(ByVal getData As JobHeadModel) As JsonResult
+            Dim updateJob As JobHeadModel = New JobHeadModel With {
+                .code = getData.code,
                 .JobName = getData.JobName
             }
 
             Dim responseStat As JobHeadModel
             Dim Exist As Integer = checkExist(getData.JobName)
             If Exist = 0 Then
-                insertJob.code = Generate_RunningCode()
-                Dim cmdQuery As New MySqlCommand("INSERT INTO `m_Jobhead`(`code`, `JobName`) VALUES (@code,@JobName)", dbCon)
-                cmdQuery.Parameters.Add("@code", MySqlDbType.VarChar).Value = insertJob.code
-                cmdQuery.Parameters.Add("@JobName", MySqlDbType.VarChar).Value = insertJob.JobName
+                Dim cmdQuery As New MySqlCommand("UPDATE m_Jobhead SET JobName=@JobName WHERE code=@code", dbCon)
+                cmdQuery.Parameters.Add("@code", MySqlDbType.VarChar).Value = updateJob.code
+                cmdQuery.Parameters.Add("@JobName", MySqlDbType.VarChar).Value = updateJob.JobName
                 dbCon.Open()
                 If cmdQuery.ExecuteNonQuery() = 1 Then
                     responseStat = Response_stat("success")
