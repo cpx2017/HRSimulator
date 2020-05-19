@@ -188,6 +188,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.vb" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.vb" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.vb" />
+    <Compile Include="Controllers\DepartController.vb" />
     <Compile Include="Controllers\EmployeeController.vb" />
     <Compile Include="Controllers\JobController.vb" />
     <Compile Include="Controllers\JSON.vb" />
@@ -195,6 +196,7 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DepartModel.vb" />
     <Compile Include="Models\EmployeeModel.vb" />
     <Compile Include="Models\JobHeadModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -320,6 +322,7 @@
     <Content Include="Content\System\js\waves.js" />
     <Content Include="ViewScript\dateObj.js" />
     <Content Include="ViewScript\DDLSync.js" />
+    <Content Include="ViewScript\DepartAdd.js" />
     <Content Include="ViewScript\EmployeeList.js" />
     <Content Include="ViewScript\JobAdd.js" />
     <Content Include="ViewScript\JobEdit.js" />
@@ -330,6 +333,7 @@
     <Content Include="Views\Employee\Disable.vbhtml" />
     <Content Include="Views\Job\Add.vbhtml" />
     <Content Include="Views\Job\Edit.vbhtml" />
+    <Content Include="Views\Depart\Add.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

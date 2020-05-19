@@ -2,12 +2,13 @@
 function event_click() {
     $('#btn_Save').click(function () {
         $.busyLoadSetup({ spinner: "circles", text: "กำลังเพิ่มข้อมูลในระบบ", animation: "fade", background: "rgba(0, 0, 0, 0.80)" });
-        var insertJob = new Object();
-        insertJob.JobName = $('#JobName').val();
+        var insertDepart = new Object();
+        insertDepart.JobCode = $('#JobList').val();
+        insertDepart.DepartName = $('#DepartName').val();
         $.busyLoadFull("show");
         $.ajax({
-            url: "/Job/AddJob",
-            data: JSON.stringify(insertJob),
+            url: "/Depart/AddDepart",
+            data: JSON.stringify(insertDepart),
             type: "POST",
             contentType: "application/json; charset=utf-8",
             dataType: "json",

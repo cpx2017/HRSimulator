@@ -44,26 +44,42 @@ Namespace Controllers
             Return Json(list_data, JsonRequestBehavior.AllowGet)
         End Function
 
-        Function DepartDDLFunc(ByVal data As String) As Integer
-            dbCon.Open()
-            Dim ExistCount As Integer
-            Dim cmdSelect As New MySqlCommand
-            Dim genAdapt As MySqlDataAdapter = New MySqlDataAdapter()
-            Dim genDS As New DataSet
-            cmdSelect = New MySqlCommand("select * from m_Jobhead where JobName=@JobName", dbCon)
-            cmdSelect.Parameters.Add("@JobName", MySqlDbType.VarChar).Value = data
+        <HttpPost>
+        Function DepartDDLFunc(data As DepartDDL) As JsonResult
+            Dim list_data As New List(Of DepartDDL)
+            Dim getDepart As DepartDDL
+            Dim getDepartList As DepartDDL = New DepartDDL With {
+                .action = data.action,
+                .JobCode = data.JobCode
+            }
 
-            genAdapt.SelectCommand = cmdSelect
+            If getDepartList.action = 1 Then
+                dbCon.Open()
+                Dim cmdSelect As New MySqlCommand
+                Dim genAdapt As MySqlDataAdapter = New MySqlDataAdapter()
+                Dim genDS As New DataSet
+                cmdSelect = New MySqlCommand("select code, Depart_Name from m_JobDepart where Job_code = @JobCode", dbCon)
+                cmdSelect.Parameters.Add("@JobCode", MySqlDbType.VarChar).Value = getDepartList.JobCode
 
+                genAdapt.SelectCommand = cmdSelect
 
-            genAdapt.Fill(genDS, "table")
-            If genDS.Tables("table").Rows.Count > 0 Then
-                ExistCount = 1
-            Else
-                ExistCount = 0
+                genAdapt.Fill(genDS, "table")
+                If genDS.Tables("table").Rows.Count > 0 Then
+                    Dim dr As DataRow
+
+                    For Each dr In genDS.Tables("table").Rows
+                        getDepart = New DepartDDL
+                        getDepart.DepartCode = dr("code").ToString
+                        getDepart.DepartName = dr("Depart_Name").ToString
+                        list_data.Add(getDepart)
+                    Next
+                    dbCon.Close()
+                Else
+                    dbCon.Close()
+                End If
+
             End If
-            dbCon.Close()
-            Return ExistCount
+            Return Json(list_data, JsonRequestBehavior.AllowGet)
         End Function
 
         Function Province(ByVal data As String) As Integer

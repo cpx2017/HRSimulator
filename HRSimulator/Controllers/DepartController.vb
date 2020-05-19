@@ -1,13 +1,9 @@
 ﻿Imports System.Web.Mvc
-Imports HRSimulator.JobHeadModel
 Imports MySql.Data.MySqlClient
-Imports HRSimulator.JSON
-Imports Newtonsoft.Json
 
 Namespace Controllers
-    Public Class JobController
+    Public Class DepartController
         Inherits Controller
-
         Public dbCon As New MySqlConnection("datasource=remotemysql.com;port=3306;username=5XBTr0keKh;password=Qirn3jsE82;database=5XBTr0keKh")
 
         ' GET: Job
@@ -40,12 +36,17 @@ Namespace Controllers
             Return ExistCount
         End Function
 
-        Function Generate_RunningCode() As String
+        Function Generate_RunningCode(ByVal data As String) As String
             dbCon.Open()
             Dim running_code As String = ""
-            Dim genAdapt As MySqlDataAdapter
+            Dim cmdSelect As New MySqlCommand
+            Dim genAdapt As MySqlDataAdapter = New MySqlDataAdapter()
             Dim genDS As New DataSet
-            genAdapt = New MySqlDataAdapter("select max(code) as mcode from m_Jobhead", dbCon)
+            cmdSelect = New MySqlCommand("select max(code) as mcode from m_JobDepart where Job_Code=@JobCode", dbCon)
+            cmdSelect.Parameters.Add("@JobCode", MySqlDbType.VarChar).Value = data
+
+            genAdapt.SelectCommand = cmdSelect
+
             genAdapt.Fill(genDS, "table")
             If genDS.Tables("table").Rows.Count > 0 Then
                 running_code = genDS.Tables("table").Rows(0)("mcode").ToString
@@ -74,18 +75,21 @@ Namespace Controllers
         End Function
 
         <HttpPost>
-        Public Function AddJob(ByVal getData As JobHeadModel) As JsonResult
-            Dim insertJob As JobHeadModel = New JobHeadModel With {
-                .JobName = getData.JobName
+        Public Function AddDepart(ByVal getData As DepartModel) As JsonResult
+            Dim insertDepart As DepartModel = New DepartModel With {
+                .JobCode = getData.JobCode,
+                   .code = getData.code,
+            .DepartName = getData.DepartName
             }
 
             Dim responseStat As JobHeadModel
-            Dim Exist As Integer = checkExist(getData.JobName)
+            Dim Exist As Integer = checkExist(getData.DepartName)
             If Exist = 0 Then
-                insertJob.code = Generate_RunningCode()
-                Dim cmdQuery As New MySqlCommand("INSERT INTO m_Jobhead (code, JobName) VALUES (@code,@JobName)", dbCon)
-                cmdQuery.Parameters.Add("@code", MySqlDbType.VarChar).Value = insertJob.code
-                cmdQuery.Parameters.Add("@JobName", MySqlDbType.VarChar).Value = insertJob.JobName
+                insertDepart.code = Generate_RunningCode(insertDepart.JobCode)
+                Dim cmdQuery As New MySqlCommand("INSERT INTO m_JobDepart(Job_code, code, Depart_Name) VALUES (@JobCode,@DepartCode,@DepartName)", dbCon)
+                cmdQuery.Parameters.Add("@JobCode", MySqlDbType.VarChar).Value = insertDepart.JobCode
+                cmdQuery.Parameters.Add("@DepartCode", MySqlDbType.VarChar).Value = insertDepart.code
+                cmdQuery.Parameters.Add("@DepartName", MySqlDbType.VarChar).Value = insertDepart.DepartName
                 dbCon.Open()
                 If cmdQuery.ExecuteNonQuery() = 1 Then
                     responseStat = Response_stat("success")
@@ -96,7 +100,6 @@ Namespace Controllers
             End If
             Return Json(responseStat, JsonRequestBehavior.AllowGet)
         End Function
-
         <HttpPost>
         Public Function EditJob(ByVal getData As JobHeadModel) As JsonResult
             Dim updateJob As JobHeadModel = New JobHeadModel With {
