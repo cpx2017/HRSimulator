@@ -21,8 +21,8 @@ Namespace Controllers
             Dim cmdSelect As New MySqlCommand
             Dim genAdapt As MySqlDataAdapter = New MySqlDataAdapter()
             Dim genDS As New DataSet
-            cmdSelect = New MySqlCommand("select * from m_Jobhead where JobName=@JobName", dbCon)
-            cmdSelect.Parameters.Add("@JobName", MySqlDbType.VarChar).Value = data
+            cmdSelect = New MySqlCommand("select * from m_JobDepart where Depart_Name=@DepartName", dbCon)
+            cmdSelect.Parameters.Add("@DepartName", MySqlDbType.VarChar).Value = data
 
             genAdapt.SelectCommand = cmdSelect
 
@@ -100,19 +100,22 @@ Namespace Controllers
             End If
             Return Json(responseStat, JsonRequestBehavior.AllowGet)
         End Function
+
         <HttpPost>
-        Public Function EditJob(ByVal getData As JobHeadModel) As JsonResult
-            Dim updateJob As JobHeadModel = New JobHeadModel With {
-                .code = getData.code,
-                .JobName = getData.JobName
+        Public Function EditDepart(ByVal getData As DepartModel) As JsonResult
+            Dim updateDepart As DepartModel = New DepartModel With {
+                .JobCode = getData.JobCode,
+                   .code = getData.code,
+            .DepartName = getData.DepartName
             }
 
             Dim responseStat As JobHeadModel
-            Dim Exist As Integer = checkExist(getData.JobName)
+            Dim Exist As Integer = checkExist(getData.DepartName)
             If Exist = 0 Then
-                Dim cmdQuery As New MySqlCommand("UPDATE m_Jobhead SET JobName=@JobName WHERE code=@code", dbCon)
-                cmdQuery.Parameters.Add("@code", MySqlDbType.VarChar).Value = updateJob.code
-                cmdQuery.Parameters.Add("@JobName", MySqlDbType.VarChar).Value = updateJob.JobName
+                Dim cmdQuery As New MySqlCommand("UPDATE m_JobDepart SET Depart_Name=@DepartName WHERE code=@DepartCode AND Job_code=@JobCode", dbCon)
+                cmdQuery.Parameters.Add("@JobCode", MySqlDbType.VarChar).Value = updateDepart.JobCode
+                cmdQuery.Parameters.Add("@DepartCode", MySqlDbType.VarChar).Value = updateDepart.code
+                cmdQuery.Parameters.Add("@DepartName", MySqlDbType.VarChar).Value = updateDepart.DepartName
                 dbCon.Open()
                 If cmdQuery.ExecuteNonQuery() = 1 Then
                     responseStat = Response_stat("success")
@@ -122,7 +125,7 @@ Namespace Controllers
                 responseStat = Response_stat("duplicate")
             End If
             Return Json(responseStat, JsonRequestBehavior.AllowGet)
-        End Function
 
+        End Function
     End Class
 End Namespace

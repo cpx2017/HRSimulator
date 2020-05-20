@@ -57,6 +57,7 @@ C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\System.Web.WebPages.De
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\System.Web.WebPages.Razor.xml
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Antlr3.Runtime.pdb
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.vbprojAssemblyReference.cache
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.Resources.resources
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.vbproj.GenerateResource.cache
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Debug\HRSimulator.vbproj.CoreCompileInputs.cache

@@ -71,7 +71,7 @@
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-multiple"></i> <span> ข้อมูลแผนก </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="#">เพิ่มชื่อแผนกงาน</a></li>
+                                <li><a href="/Depart/Add">เพิ่มชื่อแผนกงาน</a></li>
                                 <li><a href="#">แก้ไขชื่อแผนกงาน</a></li>
                             </ul>
                         </li>

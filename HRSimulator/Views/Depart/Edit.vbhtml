@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>เพิ่มแผนกสายงาน</title>
+    <title>แก้ไขแผนกสายงาน</title>
     <meta content="Admin Dashboard" name="description" />
     <meta content="Mannatthemes" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,10 +29,10 @@
                     <ol class="breadcrumb hide-phone p-0 m-0">
                         <li class="breadcrumb-item"><a href="#">HR Simulator</a></li>
                         <li class="breadcrumb-item"><a href="#">ข้อมูลแผนก</a></li>
-                        <li class="breadcrumb-item active">เพิ่มข้อมูลแผนกสายงาน</li>
+                        <li class="breadcrumb-item active">แก้ไขข้อมูลแผนกสายงาน</li>
                     </ol>
                 </div>
-                <h4 class="page-title">เพิ่มข้อมูลแผนกสายงาน</h4>
+                <h4 class="page-title">แก้ไขข้อมูลแผนกสายงาน</h4>
             </div>
         </div>
     </div>
@@ -43,9 +43,9 @@
             <div class="card m-b-30">
                 <div class="card-body">
 
-                    <h4 class="mt-0 header-title">เพิ่มแผนกสายงาน</h4>
+                    <h4 class="mt-0 header-title">แก้ไขแผนกสายงาน</h4>
                     <p class="text-muted m-b-30 font-14">
-                        เลือกตำแหน่งงานที่ต้องการเพิ่มแผนกสายงาน และกรอกชื่อแผนกสายงานย่อยของตำแหน่งงานนั้น
+                        เลือกตำแหน่งงานและแผนกสายงานที่ต้องการแก้แผนกสายงาน และกรอกชื่อแผนกสายงานย่อยของตำแหน่งงานนั้น
                     </p>
                     <div class="container-fluid">
                         <div class="row">
@@ -59,6 +59,14 @@
                                                         <label>ชื่อตำแหน่งงาน</label>
                                                         <select class="select2 form-control" id="JobList">
                                                             <option value="">>เลือกตำแหน่งงาน<</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-md-7">
+                                                        <label>ชื่อแผนกสายงานที่ต้องการแก้ไข</label>
+                                                        <select class="select2 form-control" id="DepartList">
+                                                            <option value="">>เลือกแผนก<</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -90,11 +98,14 @@
 
     <!-- Extension Script -->
     <script src="~/ViewScript/DDLSync.js"></script>
-    <script src="~/ViewScript/DepartAdd.js"></script>
+    <script src="~/ViewScript/DepartEdit.js"></script>
 
     <script>
         $(document).ready(function () {
             getJob("#JobList");
+            $('#JobList').change(function () {
+                getDepart('#DepartList', $('#JobList').val());
+            });
             event_click();
         })
     </script>

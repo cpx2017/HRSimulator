@@ -323,6 +323,7 @@
     <Content Include="ViewScript\dateObj.js" />
     <Content Include="ViewScript\DDLSync.js" />
     <Content Include="ViewScript\DepartAdd.js" />
+    <Content Include="ViewScript\DepartEdit.js" />
     <Content Include="ViewScript\EmployeeList.js" />
     <Content Include="ViewScript\JobAdd.js" />
     <Content Include="ViewScript\JobEdit.js" />
@@ -334,6 +335,7 @@
     <Content Include="Views\Job\Add.vbhtml" />
     <Content Include="Views\Job\Edit.vbhtml" />
     <Content Include="Views\Depart\Add.vbhtml" />
+    <Content Include="Views\Depart\Edit.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

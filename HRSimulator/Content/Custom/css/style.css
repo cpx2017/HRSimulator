@@ -48,6 +48,8 @@ body {
     font-family: 'Kanit', sans-serif;
     margin: 0;
     font-size: 15px;
+    animation: myfadeInAnimation 2s;
+    width: 300px;
 }
 
 html {
@@ -3511,6 +3513,26 @@ File: Responsive
 
     .notify-details {
         margin-left: 0 !important;
+    }
+
+    @keyframe myfadeInAnimation {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes myfadeInAnimation {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
 }
 /*# sourceMappingURL=style.css.map */

@@ -33,13 +33,18 @@
 });
 }
 
-function getDepart(ddl_id) {
+function getDepart(ddl_id, value) {
     $(document).ready(function () {
+        $(ddl_id).empty();
         $.busyLoadSetup({ spinner: "circles", text: "กำลังดึงข้อมูลแผนก", animation: "fade", background: "rgba(0, 0, 0, 0.80)" });
         $.busyLoadFull("show");
+        $(ddl_id).append($('<option>', {
+            value: '',
+            text: '>เลือกแผนก<'
+        }));
         var getDepartList = new Object();
         getDepartList.action = 1;
-        getDepartList.JobCode = $(ddl_id).val();
+        getDepartList.JobCode = value;
         $.ajax({
             url: "/MasterDDLSync/DepartDDLFunc",
             data: JSON.stringify(getDepartList),
