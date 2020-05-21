@@ -57,41 +57,41 @@
                         <li class="menu-title">เมนู</li>
 
                         <li>
-                            <a href="/Home/Home" class="waves-effect wrapaction"><i class="mdi mdi-home"></i><span> หน้าหลัก </span></a>
+                            <a href="/Home/Home" class="waves-effect"><i class="mdi mdi-home"></i><span> หน้าหลัก </span></a>
                         </li>
 
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-check"></i> <span> ข้อมูลตำแหน่งงาน </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="/Job/Add" class="wrapaction">เพิ่มชื่อตำแหน่งงาน</a></li>
-                                <li><a href="/Job/Edit" class="wrapaction">แก้ไขชื่อตำแหน่งงาน</a></li>
+                                <li><a href="/Job/Add">เพิ่มชื่อตำแหน่งงาน</a></li>
+                                <li><a href="/Job/Edit">แก้ไขชื่อตำแหน่งงาน</a></li>
                             </ul>
                         </li>
 
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-multiple"></i> <span> ข้อมูลแผนก </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="/Depart/Add" class="wrapaction">เพิ่มชื่อแผนกงาน</a></li>
-                                <li><a href="/Depart/Edit" class="wrapaction">แก้ไขชื่อแผนกงาน</a></li>
+                                <li><a href="/Depart/Add">เพิ่มชื่อแผนกงาน</a></li>
+                                <li><a href="/Depart/Edit">แก้ไขชื่อแผนกงาน</a></li>
                             </ul>
                         </li>
 
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i> <span> ข้อมูลพนักงาน </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="wrapaction">รายชื่อพนักงาน</a></li>
-                                <li><a href="#" class="wrapaction">เพิ่มข้อมูลพนักงาน</a></li>
-                                <li><a href="#" class="wrapaction">แก้ไขข้อมูลพนักงาน</a></li>
-                                <li><a href="#" class="wrapaction">เปลี่ยนสถานะลาออกของพนักงาน</a></li>
+                                <li><a href="#">รายชื่อพนักงาน</a></li>
+                                <li><a href="#">เพิ่มข้อมูลพนักงาน</a></li>
+                                <li><a href="#">แก้ไขข้อมูลพนักงาน</a></li>
+                                <li><a href="#">เปลี่ยนสถานะลาออกของพนักงาน</a></li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="calendar.html" class="waves-effect wrapaction"><i class="mdi mdi-note-plus"></i><span> ข้อมูลการลา </span></a>
+                            <a href="calendar.html" class="waves-effect"><i class="mdi mdi-note-plus"></i><span> ข้อมูลการลา </span></a>
                         </li>
 
                         <li>
-                            <a href="calendar.html" class="waves-effect wrapaction"><i class="mdi mdi-calendar-clock"></i><span> บันทึกเวลาเข้า-เลิกงาน </span></a>
+                            <a href="calendar.html" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> บันทึกเวลาเข้า-เลิกงาน </span></a>
                         </li>
                     </ul>
                 </div>
@@ -149,9 +149,6 @@
                             </div>
                         </li>
                         <div class="clearfix"></div>
-
-
-
                     </nav>
 
                 </div>
@@ -208,7 +205,6 @@
         $.busyLoadSetup({ spinner: "circles", text: "กำลังโหลดหน้าเว็บ", animation: "fade", background: "rgba(0, 0, 0, 0.80)" });
         $.busyLoadFull("show");
         updateClock();
-
         $(document).ready(function () {
             $.busyLoadFull("hide");
             setInterval('updateClock()', 1000);

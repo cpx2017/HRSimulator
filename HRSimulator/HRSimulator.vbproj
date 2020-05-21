@@ -63,6 +63,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -199,6 +200,7 @@
     <Compile Include="Models\DepartModel.vb" />
     <Compile Include="Models\EmployeeModel.vb" />
     <Compile Include="Models\JobHeadModel.vb" />
+    <Compile Include="Models\WeatherAPIModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -327,6 +329,7 @@
     <Content Include="ViewScript\EmployeeList.js" />
     <Content Include="ViewScript\JobAdd.js" />
     <Content Include="ViewScript\JobEdit.js" />
+    <Content Include="ViewScript\Weather.js" />
     <Content Include="ViewScript\_layout.js" />
     <Content Include="Views\Employee\List.vbhtml" />
     <Content Include="Views\Employee\Add.vbhtml" />
