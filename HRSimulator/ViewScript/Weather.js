@@ -9,8 +9,8 @@
         error: function () {
             $.busyLoadFull("hide")
             swal(
-                'พบข้อผิดพลาด',
                 'ขออภัย ระบบเกิดข้อผิดพลาดในการโหลดข้อมูลสภาพอากาศและพิกัดในขณะนี้',
+                'คำแนะนำ: เลือกการเชื่อมต่อเครือข่ายเป็น WiFi ชื่ออื่น หรือ Cellular หรือปิด VPN',
                 'error'
             )
         },
@@ -20,26 +20,6 @@
             $('#weather').text(stringify['WeatherHead'] + ', ' + stringify['WeatherDetail']);
             $('#locate').text('สถานที่ปัจจุบัน ' + stringify['CityinThai'] + ', ' + stringify['Country']);
 
-            if (stringify['WeatherHead'] == 'Clouds') {
-                $("#weathericon").addClass("mdi mdi-weather-cloudy");
-            }
-            else if (stringify['WeatherHead'] == 'Rain') {
-                $("#weathericon").addClass("mdi mdi-weather-rainy");
-            }
-            else if (stringify['WeatherHead'] == 'Drizzle') {
-                $("#weathericon").addClass("mdi mdi-weather-pouring");
-            }
-            else if (stringify['WeatherHead'] == 'Thunderstorm') {
-                $("#weathericon").addClass("mdi mdi-weather-lightning");
-            }
-            else if (stringify['WeatherHead'] == 'Clear') {
-                $("#weathericon").addClass("mdi mdi-weather-sunny");
-            }
-            else if (stringify['WeatherHead'] == 'Fog') {
-                $("#weathericon").addClass("mdi mdi-weather-fog");
-            } else {
-                $("#weathericon").addClass("mdi mdi-weather-partlycloudy");
-            }
             $.busyLoadFull("hide");
         }
     });

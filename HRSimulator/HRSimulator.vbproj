@@ -326,6 +326,7 @@
     <Content Include="ViewScript\DDLSync.js" />
     <Content Include="ViewScript\DepartAdd.js" />
     <Content Include="ViewScript\DepartEdit.js" />
+    <Content Include="ViewScript\DTSync.js" />
     <Content Include="ViewScript\EmployeeList.js" />
     <Content Include="ViewScript\JobAdd.js" />
     <Content Include="ViewScript\JobEdit.js" />

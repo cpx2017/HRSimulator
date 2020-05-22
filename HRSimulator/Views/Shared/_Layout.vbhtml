@@ -43,13 +43,13 @@
                 <div id="sidebar-menu">
                     <div class="topbar-left">
                         <div class="text-center mb-2">
-                            <a class="waves-effect" id="date"></a>
+                            <a class="waves-effect" id="date">กำลังโหลดวัน/เวลาจากเซิร์ฟเวอร์</a>
                         </div>
                         <div class="text-center mb-2">
-                            <a class="waves-effect" id="clock"></a>
+                            <a class="waves-effect" id="clock">วัน/เวลาอิงตามประเทศไทย</a>
                         </div>
                         <div class="text-center mb-3">
-                            <b><a class="waves-effect" id="workstat"></a></b>
+                            <b><a class="waves-effect" id="workstat">กำลังตรวจสอบสถานะการเปิดทำการ</a></b>
                         </div>
                     </div>
 
@@ -199,17 +199,27 @@
     <script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"></script>
 
     <!-- Extension Script -->
-    <script src="~/ViewScript/dateObj.js"></script>
+    <script src="~/ViewScript/DTSync.js"></script>
     <script src="~/ViewScript/_layout.js"></script>
     <script>
         $.busyLoadSetup({ spinner: "circles", text: "กำลังโหลดหน้าเว็บ", animation: "fade", background: "rgba(0, 0, 0, 0.80)" });
         $.busyLoadFull("show");
-        updateClock();
         $(document).ready(function () {
+            setInterval('getDT()', 10);
             $.busyLoadFull("hide");
-            setInterval('updateClock()', 1000);
         });
     </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167366183-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-167366183-1');
+    </script>
+
 </body>
 </html>
 

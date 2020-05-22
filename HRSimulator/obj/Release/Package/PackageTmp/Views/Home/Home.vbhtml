@@ -39,6 +39,31 @@
 
     <div class="row">
         <!-- Column -->
+        <div class="col-md-12 col-lg-12 col-xl-12">
+            <div class="card m-b-30">
+                <div class="card-body">
+                    <div class="d-flex flex-row">
+                        <div class="col-3 align-self-center">
+                            <div class="round">
+                                <i id="weathericon" class="mdi mdi-weather-partlycloudy"></i>
+                            </div>
+                        </div>
+                        <div class="col-8 align-self-center text-center">
+                            <div class="m-l-10">
+                                <h4 id="temper" class="mt-0 round-inner">กำลังโหลดอุณหภูมิ</h4>
+                                <h5 id="weather" class="mb-0 text-muted mb-2">กำลังโหลดข้อมูลสภาพอากาศ</h5>
+                                <p id="locate" class="mb-0 text-muted">พิกัดอิงจาก ip address บนอุปกรณ์ของคุณ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+    </div>
+
+    <div class="row">
+        <!-- Column -->
         <div class="col-md-6 col-lg-6 col-xl-4" id="TimestampModal">
             <div class="card m-b-30">
                 <div class="card-body">
@@ -107,38 +132,44 @@
     <!-- Default Script -->
     <script src="~/Content/System/js/jquery.min.js"></script>
     <script src="~/Content/System/js/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"></script>
+    <script src="~/ViewScript/Weather.js"></script>
 
     <!-- Extension Script -->
     <script>
-        $('#TimestampModal').click(function () {
-            swal(
-                {
-                    text: 'ข้อมูลจำนวนพนักงานที่เข้าทำงานทั้งหมดในแต่ละวัน ไม่ว่าจะตรงเวลาหรือมาสาย และมีการบันทึกข้อมูลในระบบแล้ว',
-                    type: 'info',
-                    showCancelButton: false,
-                    confirmButtonClass: 'btn btn-success'
-                }
-            )
-        });
-        $('#LateModal').click(function () {
-            swal(
-                {
-                    text: 'ข้อมูลจำนวนพนักงานที่เข้างานสายในแต่ละวัน และมีการบันทึกข้อมูลในระบบแล้ว หรือคนที่ไม่ได้มีการบันทึกเวลาเข้างานหรือยื่นใบลา จะมีสถานะเป็นขาดงานในวันนั้น',
-                    type: 'info',
-                    showCancelButton: false,
-                    confirmButtonClass: 'btn btn-success'
-                }
-            )
-        });
-        $('#ExceptModal').click(function () {
-            swal(
-                {
-                    text: 'ข้อมูลจำนวนพนักงานที่ยื่นใบลา และมีการบันทึกข้อมูลในระบบแล้ว ไม่ว่าจะอนุมัติหรือไม่ก็ตาม',
-                    type: 'info',
-                    showCancelButton: false,
-                    confirmButtonClass: 'btn btn-success'
-                }
-            )
+       
+        $(document).ready(function () {
+            getWeather();
+            $('#TimestampModal').click(function () {
+                swal(
+                    {
+                        text: 'ข้อมูลจำนวนพนักงานที่เข้าทำงานทั้งหมดในแต่ละวัน ไม่ว่าจะตรงเวลาหรือมาสาย และมีการบันทึกข้อมูลในระบบแล้ว',
+                        type: 'info',
+                        showCancelButton: false,
+                        confirmButtonClass: 'btn btn-success'
+                    }
+                )
+            });
+            $('#LateModal').click(function () {
+                swal(
+                    {
+                        text: 'ข้อมูลจำนวนพนักงานที่เข้างานสายในแต่ละวัน และมีการบันทึกข้อมูลในระบบแล้ว หรือคนที่ไม่ได้มีการบันทึกเวลาเข้างานหรือยื่นใบลา จะมีสถานะเป็นขาดงานในวันนั้น',
+                        type: 'info',
+                        showCancelButton: false,
+                        confirmButtonClass: 'btn btn-success'
+                    }
+                )
+            });
+            $('#ExceptModal').click(function () {
+                swal(
+                    {
+                        text: 'ข้อมูลจำนวนพนักงานที่ยื่นใบลา และมีการบันทึกข้อมูลในระบบแล้ว ไม่ว่าจะอนุมัติหรือไม่ก็ตาม',
+                        type: 'info',
+                        showCancelButton: false,
+                        confirmButtonClass: 'btn btn-success'
+                    }
+                )
+            });
         });
     </script>
 </body>

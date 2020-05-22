@@ -101,7 +101,7 @@
         }
     })
 
-    var i = 1;
+    var i = 0;
     if (i == 0) {
         $(document).bind("contextmenu", function (e) {
             swal(

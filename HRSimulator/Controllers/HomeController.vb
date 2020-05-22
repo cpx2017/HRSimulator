@@ -13,28 +13,30 @@ Public Class HomeController
 
     <HttpGet>
     Public Function Weather() As JsonResult
-        Dim request As HttpWebRequest
+        Dim ip As String = "184.22.38.46"
+        'Dim ip As String = Request.UserHostAddress
+        Dim getrequest As HttpWebRequest
         Dim response As HttpWebResponse = Nothing
         Dim reader As StreamReader
 
-        request = DirectCast(WebRequest.Create("http://ip-api.com/json/"), HttpWebRequest)
+        getrequest = DirectCast(WebRequest.Create("http://ip-api.com/json/" & ip), HttpWebRequest)
 
-        response = DirectCast(request.GetResponse(), HttpWebResponse)
+        response = DirectCast(getrequest.GetResponse(), HttpWebResponse)
         reader = New StreamReader(response.GetResponseStream())
 
         Dim rawresp As String
         rawresp = reader.ReadToEnd()
-        Dim jsonResult = JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(rawresp)
-        Dim City As String = jsonResult.Item("regionName").ToString()
-        Dim Country As String = jsonResult.Item("country").ToString()
+        Dim jsonResult As Object = New JavaScriptSerializer().Deserialize(Of Object)(rawresp)
+        Dim City As String = jsonResult("regionName")
+        Dim Country As String = jsonResult("country")
 
 
 
         Dim WeatherData As New WeatherAPIModel
 
-        request = DirectCast(WebRequest.Create("http://api.openweathermap.org/data/2.5/weather?q=" & City & "&units=metric&lang=th&appid=19257c7ba8475d851d003dc850458cc8"), HttpWebRequest)
+        getrequest = DirectCast(WebRequest.Create("http://api.openweathermap.org/data/2.5/weather?q=" & City & "&units=metric&lang=th&appid=19257c7ba8475d851d003dc850458cc8"), HttpWebRequest)
 
-        response = DirectCast(request.GetResponse(), HttpWebResponse)
+        response = DirectCast(getrequest.GetResponse(), HttpWebResponse)
         reader = New StreamReader(response.GetResponseStream())
 
         Dim rawWeather As String

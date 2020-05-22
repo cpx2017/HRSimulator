@@ -80,13 +80,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/09/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/HRSimulator.dll">
-      <publishTime>05/20/2020 20:05:19</publishTime>
+      <publishTime>05/21/2020 21:08:10</publishTime>
     </File>
     <File Include="bin/HRSimulator.pdb">
-      <publishTime>05/20/2020 20:05:19</publishTime>
+      <publishTime>05/21/2020 21:08:10</publishTime>
     </File>
     <File Include="bin/HRSimulator.xml">
-      <publishTime>05/20/2020 20:05:19</publishTime>
+      <publishTime>05/21/2020 21:08:10</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/09/2018 16:10:50</publishTime>
@@ -125,19 +125,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/27/2016 21:50:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>06/27/2016 21:50:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
       <publishTime>06/27/2016 21:50:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>06/27/2016 21:50:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
       <publishTime>06/27/2016 21:50:24</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>06/27/2016 21:50:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
       <publishTime>06/27/2016 21:50:24</publishTime>
@@ -149,7 +149,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/27/2016 21:50:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>06/27/2016 21:50:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
       <publishTime>06/27/2016 21:50:24</publishTime>
@@ -161,10 +161,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/27/2016 21:50:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>06/27/2016 21:50:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>06/27/2016 21:50:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe.config">
       <publishTime>06/27/2016 21:50:24</publishTime>
@@ -173,7 +173,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/27/2016 21:50:24</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>06/27/2016 21:50:24</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>06/27/2016 21:50:24</publishTime>
@@ -422,7 +422,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/11/2020 13:16:17</publishTime>
     </File>
     <File Include="Views/Home/Home.vbhtml">
-      <publishTime>05/07/2020 18:44:05</publishTime>
+      <publishTime>05/21/2020 20:24:35</publishTime>
     </File>
     <File Include="Views/Job/Add.vbhtml">
       <publishTime>05/14/2020 18:31:44</publishTime>
@@ -434,7 +434,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/05/2020 13:58:13</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.vbhtml">
-      <publishTime>05/20/2020 19:59:21</publishTime>
+      <publishTime>05/21/2020 19:44:02</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>05/05/2020 13:58:13</publishTime>
@@ -463,8 +463,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="ViewScript/JobEdit.js">
       <publishTime>05/19/2020 16:50:36</publishTime>
     </File>
+    <File Include="ViewScript/Weather.js">
+      <publishTime>05/21/2020 20:39:32</publishTime>
+    </File>
     <File Include="ViewScript/_layout.js">
-      <publishTime>05/20/2020 19:12:59</publishTime>
+      <publishTime>05/21/2020 20:43:23</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>05/15/2020 17:04:14</publishTime>
