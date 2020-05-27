@@ -276,8 +276,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
-    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\FTPProfile.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -294,6 +293,7 @@
     <Content Include="Content\Fonts\themify.svg" />
     <Content Include="Content\Fonts\typicons.svg" />
     <Content Include="Content\System\css\bootstrap.min.css" />
+    <Content Include="Content\System\css\buttons.bootstrap4.min.css" />
     <Content Include="Content\System\css\dataTables.bootstrap4.min.css" />
     <Content Include="Content\System\css\morris.css" />
     <Content Include="Content\System\css\responsive.bootstrap4.min.css" />
@@ -302,6 +302,10 @@
     <Content Include="Content\System\image\favicon.ico" />
     <Content Include="Content\System\image\logo.png" />
     <Content Include="Content\System\js\bootstrap.min.js" />
+    <Content Include="Content\System\js\buttons.bootstrap4.min.js" />
+    <Content Include="Content\System\js\buttons.colVis.min.js" />
+    <Content Include="Content\System\js\buttons.html5.min.js" />
+    <Content Include="Content\System\js\buttons.print.min.js" />
     <Content Include="Content\System\js\dataTables.bootstrap4.min.js" />
     <Content Include="Content\System\js\dataTables.buttons.min.js" />
     <Content Include="Content\System\js\dataTables.responsive.min.js" />
@@ -313,21 +317,24 @@
     <Content Include="Content\System\js\jquery.nicescroll.js" />
     <Content Include="Content\System\js\jquery.scrollTo.min.js" />
     <Content Include="Content\System\js\jquery.slimscroll.js" />
+    <Content Include="Content\System\js\jszip.min.js" />
     <Content Include="Content\System\js\modernizr.min.js" />
     <Content Include="Content\System\js\morris.min.js" />
+    <Content Include="Content\System\js\pdfmake.min.js" />
     <Content Include="Content\System\js\popper.min.js" />
     <Content Include="Content\System\js\raphael-min.js" />
     <Content Include="Content\System\js\responsive.bootstrap4.min.js" />
     <Content Include="Content\System\js\select2.min.js" />
     <Content Include="Content\System\js\skycons.min.js" />
     <Content Include="Content\System\js\sweetalert2.min.js" />
+    <Content Include="Content\System\js\vfs_fonts.js" />
     <Content Include="Content\System\js\waves.js" />
     <Content Include="ViewScript\dateObj.js" />
     <Content Include="ViewScript\DDLSync.js" />
     <Content Include="ViewScript\DepartAdd.js" />
     <Content Include="ViewScript\DepartEdit.js" />
     <Content Include="ViewScript\DTSync.js" />
-    <Content Include="ViewScript\EmployeeList.js" />
+    <Content Include="ViewScript\EmpList.js" />
     <Content Include="ViewScript\JobAdd.js" />
     <Content Include="ViewScript\JobEdit.js" />
     <Content Include="ViewScript\Weather.js" />

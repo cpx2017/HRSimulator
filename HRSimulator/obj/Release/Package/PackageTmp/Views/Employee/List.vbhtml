@@ -49,7 +49,7 @@
                         ตาม Requirement ของบริษัท
                     </p>
 
-                    <table id="datatable" class="table table-bordered">
+                    <table id="EmpData" class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>รหัสพนักงาน</th>
@@ -81,5 +81,6 @@
     <script src="~/Content/System/js/dataTables.buttons.min.js"></script>
     <script src="~/Content/System/js/dataTables.responsive.min.js"></script>
     <script src="~/Content/System/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/ViewScript/EmpList.js"></script>
 </body>
 </html>

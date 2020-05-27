@@ -79,7 +79,7 @@
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i> <span> ข้อมูลพนักงาน </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="#">รายชื่อพนักงาน</a></li>
+                                <li><a href="/Employee/List">รายชื่อพนักงาน</a></li>
                                 <li><a href="#">เพิ่มข้อมูลพนักงาน</a></li>
                                 <li><a href="#">แก้ไขข้อมูลพนักงาน</a></li>
                                 <li><a href="#">เปลี่ยนสถานะลาออกของพนักงาน</a></li>
@@ -205,7 +205,7 @@
         $.busyLoadSetup({ spinner: "circles", text: "กำลังโหลดหน้าเว็บ", animation: "fade", background: "rgba(0, 0, 0, 0.80)" });
         $.busyLoadFull("show");
         $(document).ready(function () {
-            setInterval('getDT()', 10);
+            setInterval('getDT()', 100);
             $.busyLoadFull("hide");
         });
     </script>

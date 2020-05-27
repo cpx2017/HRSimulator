@@ -95,8 +95,8 @@
         })
     });
 
-            var i = 0;
-            if (i == 0) {
+            var i = 1;
+    if (i == 0) {
                 $(document).bind("contextmenu", function (e) {
                     swal(
                         {
@@ -121,5 +121,7 @@
                         return false;
                     }
                 });
+
+        console.clear();
             }
-        }
+}
