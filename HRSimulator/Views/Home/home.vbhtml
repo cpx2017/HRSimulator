@@ -52,7 +52,6 @@
                             <div class="m-l-10">
                                 <h4 id="temper" class="mt-0 round-inner">กำลังโหลดอุณหภูมิ</h4>
                                 <h5 id="weather" class="mb-0 text-muted mb-2">กำลังโหลดข้อมูลสภาพอากาศ</h5>
-                                <p id="locate" class="mb-0 text-muted">พิกัดอิงจาก ip address บนอุปกรณ์ของคุณ</p>
                             </div>
                         </div>
                     </div>

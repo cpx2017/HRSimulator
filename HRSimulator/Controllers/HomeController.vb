@@ -13,14 +13,8 @@ Public Class HomeController
 
     <HttpGet>
     Public Function Weather() As JsonResult
-        Dim Testmode = 1
+        Dim ip As String = "182.232.189.66"
 
-        Dim ip As String
-        If Testmode = 1 Then
-            ip = "182.232.189.66"
-        Else
-            ip = Request.UserHostAddress
-        End If
         Dim getrequest As HttpWebRequest
         Dim response As HttpWebResponse = Nothing
         Dim reader As StreamReader
@@ -52,8 +46,6 @@ Public Class HomeController
         WeatherData.FeelTemp = jResults("main")("feels_like")
         WeatherData.WeatherHead = jResults("weather")(0)("main")
         WeatherData.WeatherDetail = jResults("weather")(0)("description")
-        WeatherData.CityinThai = jResults("name")
-        WeatherData.Country = Country
 
         Return Json(WeatherData, JsonRequestBehavior.AllowGet)
     End Function

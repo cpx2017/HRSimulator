@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="~/Content/System/image/favicon.ico">
     <link href="~/Content/System/css/sweetalert2.min.css" rel="stylesheet" type="text/css">
     <link href="~/Content/System/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/System/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/System/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Extension Class -->
@@ -42,10 +43,14 @@
         <div class="col-12">
             <div class="card m-b-30">
                 <div class="card-body">
-
-                    <h4 class="mt-0 header-title">รายชื่อพนักงานในบริษัท</h4>
+                    <div class="row">
+                        <h4 class="col-md-6 header-title">รายชื่อพนักงานในบริษัท</h4>
+                        <div class="col-md-6 text-right">
+                            <button type="button" class="btn btn-outline-primary"><i class="mdi mdi-plus"></i> เพิ่มข้อมูลพนักงาน</button>
+                        </div>
+                    </div>
                     <p class="text-muted m-b-30 font-14">
-                       ข้อมูลที่เห็นเป็นข้อมูลพนักงานจาก Database จริงๆ แต่ Detail อาจแตกต่างกันบ้าง
+                        ข้อมูลที่เห็นเป็นข้อมูลพนักงานจาก Database จริงๆ แต่ Detail อาจแตกต่างกันบ้าง
                         ตาม Requirement ของบริษัท
                     </p>
 
@@ -57,13 +62,10 @@
                                 <th>อายุ</th>
                                 <th>ตำแหน่ง</th>
                                 <th>เบอร์โทรติดต่อ</th>
-                                <th>Salary</th>
+                                <th>ตัวเลือก</th>
                             </tr>
                         </thead>
-
-
                         <tbody>
-                            
                         </tbody>
                     </table>
 
@@ -76,11 +78,27 @@
     <script src="~/Content/System/js/sweetalert2.min.js"></script>
 
     <!-- Extension Script -->
+
     <script src="~/Content/System/js/jquery.dataTables.min.js"></script>
     <script src="~/Content/System/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
     <script src="~/Content/System/js/dataTables.buttons.min.js"></script>
+    <script src="~/Content/System/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/Content/System/js/jszip.min.js"></script>
+    <script src="~/Content/System/js/pdfmake.min.js"></script>
+    <script src="~/Content/System/js/vfs_fonts.js"></script>
+    <script src="~/Content/System/js/buttons.html5.min.js"></script>
+    <script src="~/Content/System/js/buttons.print.min.js"></script>
+    <script src="~/Content/System/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
     <script src="~/Content/System/js/dataTables.responsive.min.js"></script>
     <script src="~/Content/System/js/responsive.bootstrap4.min.js"></script>
+
     <script src="~/ViewScript/EmpList.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            getEmp();
+        });
+    </script>
 </body>
 </html>

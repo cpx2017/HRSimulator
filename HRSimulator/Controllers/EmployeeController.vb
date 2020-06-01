@@ -54,39 +54,5 @@ Namespace Controllers
             Return respone
         End Function
 
-        <HttpGet>
-        Public Function EmpList() As JsonResult
-            Dim list_data As New List(Of EmployeeModel)
-            Dim EmpDatatable As New EmployeeModel
-
-            dbCon.Open()
-            Dim cmdSelect As New MySqlCommand
-            Dim genAdapt As MySqlDataAdapter = New MySqlDataAdapter()
-            Dim genDS As New DataSet
-            cmdSelect = New MySqlCommand("select * from Employee", dbCon)
-
-            genAdapt.SelectCommand = cmdSelect
-
-            genAdapt.Fill(genDS, "table")
-            If genDS.Tables("table").Rows.Count > 0 Then
-                Dim dr As DataRow
-
-                For Each dr In genDS.Tables("table").Rows
-                    EmpDatatable = New EmployeeModel
-                    EmpDatatable.code = dr("code").ToString
-                    EmpDatatable.em_name = dr("JobName").ToString
-                    list_data.Add(EmpDatatable)
-                Next
-                dbCon.Close()
-            Else
-                For Each dr In genDS.Tables("table").Rows
-                    EmpDatatable = New EmployeeModel
-                    list_data.Add(EmpDatatable)
-                Next
-                dbCon.Close()
-            End If
-
-            Return Json(list_data, JsonRequestBehavior.AllowGet)
-        End Function
     End Class
 End Namespace
