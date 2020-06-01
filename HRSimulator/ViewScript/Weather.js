@@ -16,9 +16,8 @@
         },
         success: function (response) {
             var stringify = JSON.parse(JSON.stringify(response));
-            $('#temper').text('อุณหภูมิตอนนี้ ' + stringify['Temp'].toFixed(0) + '°C (รู้สึกได้ ' + stringify['FeelTemp'].toFixed(0) + '°C)');
+            $('#temper').text('อุณหภูมิตอนนี้ ' + stringify['Temp'].toFixed(1) + '°C (รู้สึกได้ ' + stringify['FeelTemp'].toFixed(1) + '°C)');
             $('#weather').text(stringify['WeatherHead'] + ', ' + stringify['WeatherDetail']);
-            $('#locate').text('สถานที่ปัจจุบัน ' + stringify['CityinThai'] + ', ' + stringify['Country']);
 
             $.busyLoadFull("hide");
         }

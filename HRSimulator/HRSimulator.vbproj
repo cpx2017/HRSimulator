@@ -276,7 +276,8 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\hrsim - FTP.pubxml" />
+    <None Include="My Project\PublishProfiles\hrsim - Web Deploy.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -289,7 +290,6 @@
     <Content Include="Content\Fonts\dripicons-v2.svg" />
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Fonts\ionicons.svg" />
-    <Content Include="Content\Fonts\materialdesignicons-webfont.svg" />
     <Content Include="Content\Fonts\themify.svg" />
     <Content Include="Content\Fonts\typicons.svg" />
     <Content Include="Content\System\css\bootstrap.min.css" />
@@ -329,7 +329,6 @@
     <Content Include="Content\System\js\sweetalert2.min.js" />
     <Content Include="Content\System\js\vfs_fonts.js" />
     <Content Include="Content\System\js\waves.js" />
-    <Content Include="ViewScript\dateObj.js" />
     <Content Include="ViewScript\DDLSync.js" />
     <Content Include="ViewScript\DepartAdd.js" />
     <Content Include="ViewScript\DepartEdit.js" />

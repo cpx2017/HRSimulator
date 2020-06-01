@@ -1,7 +1,7 @@
 ﻿function getDT() {
             var getDay, getDate, getMonth, getYear, getHour,getMinute,getSec,workStat,workstring;
 
-    $.getJSON('https://script.googleusercontent.com/macros/echo?user_content_key=nVc9AumQ-RW8Bsp7yfd8Do_jeHh7jv5zB-yQ19p4sJPRTMnOp3IMS-oX4-HDnzDzWELIhzsDMyQoXT0hwJAwpZq7q2y10oaPm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJ9GRkcRevgjTvo8Dc32iw_BLJPcPfRdVKhJT5HNzQuXEeN3QFwl2n0M6ZmO-h7C6bwVq0tbM60-uGhoxl1-0xZ49QdGJB90pQ&lib=MwxUjRcLr2qLlnVOLh12wSNkqcO1Ikdrk', function (data) {
+    $.getJSON('https://script.google.com/macros/s/AKfycbyd5AcbAnWi2Yn0xhFRbyzS4qMq1VucMVgVvhul5XqS9HkAyJY/exec?tz=Asia/Bangkok', function (data) {
         getDay = data.dayofweek;
         getDate = data.day;
         getMonth = data.month;
@@ -40,19 +40,19 @@
             monthString = 'เมษายน'
         } else if (getMonth == 5) {
             monthString = 'พฤษภาคม'
-        } else if (month == 6) {
+        } else if (getMonth == 6) {
             monthString = 'มิถุนายน'
-        } else if (month == 7) {
+        } else if (getMonth == 7) {
             monthString = 'กรกฎาคม'
-        } else if (month == 8) {
+        } else if (getMonth == 8) {
             monthString = 'สิงหาคม'
-        } else if (month == 9) {
+        } else if (getMonth == 9) {
             monthString = 'กันยายน'
-        } else if (month == 10) {
+        } else if (getMonth == 10) {
             monthString = 'ตุลาคม'
-        } else if (month == 11) {
+        } else if (getMonth == 11) {
             monthString = 'พฤศจิกายน'
-        } else if (month == 12) {
+        } else if (getMonth == 12) {
             monthString = 'ธันวาคม'
         }
 
@@ -95,7 +95,7 @@
         })
     });
 
-            var i = 1;
+   var i = 1;
     if (i == 0) {
                 $(document).bind("contextmenu", function (e) {
                     swal(
@@ -121,7 +121,5 @@
                         return false;
                     }
                 });
-
-        console.clear();
             }
 }

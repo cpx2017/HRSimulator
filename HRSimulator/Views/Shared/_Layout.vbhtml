@@ -199,8 +199,8 @@
     <script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"></script>
 
     <!-- Extension Script -->
-    <script src="~/ViewScript/DTSync.js"></script>
     <script src="~/ViewScript/_layout.js"></script>
+    <script src="~/ViewScript/DTSync.js"></script>
     <script>
         $.busyLoadSetup({ spinner: "circles", text: "กำลังโหลดหน้าเว็บ", animation: "fade", background: "rgba(0, 0, 0, 0.80)" });
         $.busyLoadFull("show");
