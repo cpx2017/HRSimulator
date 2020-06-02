@@ -87,11 +87,15 @@
                         </li>
 
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="mdi mdi-note-plus"></i><span> ข้อมูลการลา </span></a>
+                            <a href="#" class="waves-effect"><i class="mdi mdi-note-plus"></i><span> ข้อมูลการลา </span></a>
                         </li>
 
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> บันทึกเวลาเข้า-เลิกงาน </span></a>
+                            <a href="#" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> บันทึกเวลาเข้า-เลิกงาน </span></a>
+                        </li>
+
+                        <li>
+                            <a href="/Report/getReport" class="waves-effect"><i class="mdi mdi-alert-circle"></i><span> แจ้งปัญหาระบบ </span></a>
                         </li>
                     </ul>
                 </div>

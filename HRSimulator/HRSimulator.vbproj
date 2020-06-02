@@ -194,12 +194,14 @@
     <Compile Include="Controllers\JobController.vb" />
     <Compile Include="Controllers\JSON.vb" />
     <Compile Include="Controllers\MasterDDLSyncController.vb" />
+    <Compile Include="Controllers\ReportController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DepartModel.vb" />
     <Compile Include="Models\EmployeeModel.vb" />
     <Compile Include="Models\JobHeadModel.vb" />
+    <Compile Include="Models\ReportModel.vb" />
     <Compile Include="Models\WeatherAPIModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -334,6 +336,7 @@
     <Content Include="ViewScript\DepartEdit.js" />
     <Content Include="ViewScript\DTSync.js" />
     <Content Include="ViewScript\EmpList.js" />
+    <Content Include="ViewScript\getReport.js" />
     <Content Include="ViewScript\JobAdd.js" />
     <Content Include="ViewScript\JobEdit.js" />
     <Content Include="ViewScript\Weather.js" />
@@ -346,6 +349,7 @@
     <Content Include="Views\Job\Edit.vbhtml" />
     <Content Include="Views\Depart\Add.vbhtml" />
     <Content Include="Views\Depart\Edit.vbhtml" />
+    <Content Include="Views\Report\getReport.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
