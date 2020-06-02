@@ -83,12 +83,12 @@ Namespace Controllers
             Dim responseStat As ReportModel
             Try
                 setup.Send(getMail)
-                autoReply(getsyncReport.email)
             Catch exc As Exception
                 Response.Write("Send failure: " & exc.ToString())
                 responseStat = Response_stat("error")
             Finally
                 responseStat = Response_stat("success")
+                autoReply(getsyncReport.email)
             End Try
 
             Return Json(responseStat, JsonRequestBehavior.AllowGet)
