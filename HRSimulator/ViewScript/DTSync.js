@@ -10,25 +10,8 @@
         getMinute = String(data.minutes).padStart(2, '0');
         getSec = String(data.seconds).padStart(2, '0');
         timestring = data.hours + getMinute + getSec;
-        if (getDay >= 1 && getDay <= 5) {
-            if (timestring >= 83000 && timestring <= 173000) {
-                workStat = 0;
-            } else {
-                workStat = 1;
-            }
-        } else {
-            workStat = 2;
-        }
-
+   
         var monthString;
-
-        if (workStat == 0) {
-            workstring = 'บริษัทเปิดทำการ';
-        } else if (workStat == 1) {
-            workstring = 'บริษัทอยู่นอกเวลาทำการ';
-        } else if (workStat == 2) {
-            workstring = 'บริษัทปิดทำการในวันเสาร์-อาทิตย์'
-        }
 
         if (getMonth == 1) {
             monthString = 'มกราคม'
@@ -61,65 +44,7 @@
 
         $("#date").html(currentDateString);
         $("#clock").html(currentTimeString);
-        $("#workstat").html(workstring);
-
-        $('#workstat').click(function () {
-            if (workStat == 0) {
-                swal(
-                    {
-                        text: 'ช่วงวันเวลาเปิดทำการ ทุกฟังก์ชันในระบบเปิดใช้งานตามปกติ',
-                        type: 'info',
-                        showCancelButton: false,
-                        confirmButtonClass: 'btn btn-success'
-                    }
-                )
-            } else if (workStat == 1) {
-                swal(
-                    {
-                        text: 'ช่วงนอกเวลาทำการ คุณสามารถส่งใบลาได้ทุกประเภท และสามารถบันทึกเวลาเลิกงานไม่เกิน 20.00 น.',
-                        type: 'info',
-                        showCancelButton: false,
-                        confirmButtonClass: 'btn btn-success'
-                    }
-                )
-            } else if (workStat == 2) {
-                swal(
-                    {
-                        text: 'ช่วงนอกเวลาทำการ (วันหยุดนักขัตฤกษ์) คุณสามารถส่งใบลาได้ทุกประเภท ยกเว้นลาป่วย และไม่สามารถบันทึกเวลาทำงานล่วงหน้าหรือย้อนหลังได้',
-                        type: 'info',
-                        showCancelButton: false,
-                        confirmButtonClass: 'btn btn-success'
-                    }
-                )
-            }
-        })
     });
 
-   var i = 0;
-    if (i == 0) {
-                $(document).bind("contextmenu", function (e) {
-                    swal(
-                        {
-                            text: 'Right-Click was disabled from this site for system security reason. To Cut, Copy or Paste any text Please use following shortcut (Ctrl + X), (Ctrl + C) or (Ctrl + V).',
-                            type: 'info',
-                            showCancelButton: false,
-                            confirmButtonClass: 'btn btn-success'
-                        }
-                    )
-                    e.preventDefault();
-                });
-                $(document).keydown(function (e) {
-                    if (e.which === 123) {
-                        swal(
-                            {
-                                text: 'Inspect Element was disabled from this site for system security reason.',
-                                type: 'info',
-                                showCancelButton: false,
-                                confirmButtonClass: 'btn btn-success'
-                            }
-                        )
-                        return false;
-                    }
-                });
-            }
+   
 }

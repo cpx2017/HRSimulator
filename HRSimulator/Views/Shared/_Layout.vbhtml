@@ -205,11 +205,16 @@
     <!-- Extension Script -->
     <script src="~/ViewScript/_layout.js"></script>
     <script src="~/ViewScript/DTSync.js"></script>
+    <script src="~/ViewScript/InspectLock.js"></script>
+    <script src="~/ViewScript/workStatus.js"></script>
+
     <script>
         $.busyLoadSetup({ spinner: "circles", text: "กำลังโหลดหน้าเว็บ", animation: "fade", background: "rgba(0, 0, 0, 0.80)" });
         $.busyLoadFull("show");
         $(document).ready(function () {
             setInterval('getDT()', 100);
+            setInterval('getWorkDetail()', 100);
+            setInterval('InspectLock()', 100);
             $.busyLoadFull("hide");
         });
     </script>
