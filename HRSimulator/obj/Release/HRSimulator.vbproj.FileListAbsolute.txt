@@ -65,3 +65,14 @@ C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Release\HRSimulator.vb
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Release\HRSimulator.dll
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Release\HRSimulator.xml
 C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\obj\Release\HRSimulator.pdb
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.Owin.dll
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.Owin.Security.dll
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Owin.dll
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.Owin.xml
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\CPX2017\source\repos\HRSimulator\HRSimulator\bin\Microsoft.Owin.Security.xml

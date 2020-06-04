@@ -46,7 +46,7 @@
                     <div class="row">
                         <h4 class="col-md-6 header-title">รายชื่อพนักงานในบริษัท</h4>
                         <div class="col-md-6 text-right">
-                            <button type="button" class="btn btn-outline-primary"><i class="mdi mdi-plus"></i> เพิ่มข้อมูลพนักงาน</button>
+                            <a href="/Employee/Add" class="btn btn-outline-primary"><i class="mdi mdi-plus"></i> เพิ่มข้อมูลพนักงาน</a>
                         </div>
                     </div>
                     <p class="text-muted m-b-30 font-14">

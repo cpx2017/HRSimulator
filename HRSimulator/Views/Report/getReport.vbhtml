@@ -51,8 +51,6 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="panel-group">
-                                    <div class="card">
-                                        <div class="col-md-12 card-body">
                                             <div class="col-md-12">
                                                 <div class="row">
                                                     <div class="form-group col-md-7">
@@ -94,12 +92,10 @@
                                                 <div class="row">
                                                     <div class="button-group">
                                                         <button type="button" id="btn_Save" class="btn btn-success"><i class="mdi mdi-content-save"></i> บันทึก</button>
-                                                        <a href="/Home/Home" class="btn btn-default view-only"><i class="mdi mdi-reply"></i> ย้อนกลับ</a>
+                                                        <a href="/Home/Home" class="btn btn-outline-danger"><i class="mdi mdi-reply"></i> ย้อนกลับ</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> <!-- end col -->
-                                    </div> <!-- end row -->
                                 </div>
                             </div>
                         </div> <!-- end col -->

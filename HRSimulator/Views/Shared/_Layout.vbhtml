@@ -15,6 +15,7 @@
     <link href="~/Content/Custom/css/icons.css" rel="stylesheet" type="text/css">
     <link href="~/Content/Custom/css/style.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Extension Class -->
 
@@ -69,29 +70,23 @@
                         </li>
 
                         <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-multiple"></i> <span> ข้อมูลแผนก </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-location"></i> <span> ข้อมูลแผนก </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                             <ul class="list-unstyled">
                                 <li><a href="/Depart/Add">เพิ่มชื่อแผนกงาน</a></li>
                                 <li><a href="/Depart/Edit">แก้ไขชื่อแผนกงาน</a></li>
                             </ul>
                         </li>
 
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i> <span> ข้อมูลพนักงาน </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                            <ul class="list-unstyled">
-                                <li><a href="/Employee/List">รายชื่อพนักงาน</a></li>
-                                <li><a href="#">เพิ่มข้อมูลพนักงาน</a></li>
-                                <li><a href="#">แก้ไขข้อมูลพนักงาน</a></li>
-                                <li><a href="#">เปลี่ยนสถานะลาออกของพนักงาน</a></li>
-                            </ul>
-                        </li>
-
                         <li>
-                            <a href="#" class="waves-effect"><i class="mdi mdi-note-plus"></i><span> ข้อมูลการลา </span></a>
+                            <a href="/Employee/List" class="waves-effect"><i class="mdi mdi-account-multiple"></i><span> ข้อมูลพนักงาน </span></a>
                         </li>
 
                         <li>
                             <a href="#" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> บันทึกเวลาเข้า-เลิกงาน </span></a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="waves-effect"><i class="mdi mdi-note-plus"></i><span> ข้อมูลการลา </span></a>
                         </li>
 
                         <li>
@@ -201,6 +196,11 @@
     <script src="~/Content/System/js/raphael-min.js"></script>
     <script src="~/Content/System/js/morris.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/Content/Custom/js/bootstrap-datepicker-custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.th.min.js"></script>
+
 
     <!-- Extension Script -->
     <script src="~/ViewScript/_layout.js"></script>

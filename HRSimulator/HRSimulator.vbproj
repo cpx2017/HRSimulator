@@ -213,7 +213,6 @@
     <Compile Include="Controllers\JSON.vb" />
     <Compile Include="Controllers\MasterDDLSyncController.vb" />
     <Compile Include="Controllers\ReportController.vb" />
-    <Compile Include="Controllers\RTNoti.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -270,6 +269,7 @@
     <Content Include="Areas\HelpPage\Views\Help\Api.vbhtml" />
     <Content Include="Content\Custom\css\icons.css.map" />
     <Content Include="Content\Custom\css\style.css.map" />
+    <Content Include="Content\Custom\js\bootstrap-datepicker-custom.js" />
     <Content Include="Content\Fonts\dripicons-v2.eot" />
     <Content Include="Content\Fonts\dripicons-v2.ttf" />
     <Content Include="Content\Fonts\dripicons-v2.woff" />
@@ -355,7 +355,9 @@
     <Content Include="ViewScript\DDLSync.js" />
     <Content Include="ViewScript\DepartAdd.js" />
     <Content Include="ViewScript\DepartEdit.js" />
+    <Content Include="ViewScript\DOBCal.js" />
     <Content Include="ViewScript\DTSync.js" />
+    <Content Include="ViewScript\EmpAdd.js" />
     <Content Include="ViewScript\EmpList.js" />
     <Content Include="ViewScript\getReport.js" />
     <Content Include="ViewScript\InspectLock.js" />
