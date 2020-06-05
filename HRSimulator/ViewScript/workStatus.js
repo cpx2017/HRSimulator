@@ -11,8 +11,12 @@
         getSec = String(data.seconds).padStart(2, '0');
         timestring = data.hours + getMinute + getSec;
         if (getDay >= 1 && getDay <= 5) {
-                    $.getJSON('https://getfestivo.com/v2/holidays?api_key=e5604303b65ccba1f53ed2572e1449b7&country=TH&year=' + data.year + '&month=' + getMonth + '&day=' + getDate, function (holiday) {
-                        if (holiday.holidays != '') {
+
+
+
+
+            $.getJSON('https://www.googleapis.com/calendar/v3/calendars/th.th%23holiday%40group.v.calendar.google.com/events?key=AIzaSyAv8klogsdixW9BpwkkQt9TFp3B0RTNUzg&timeMin='+ data.year +'-' + getMonth + '-' + getDate + 'T00:00:00Z&timeMax='+ data.year +'-' + getMonth + '-' + getDate + 'T23:59:59Z', function (holiday) {
+                        if (holiday.items != '') {
                             $("#workstat").html('วันหยุดนักขัตฤกษ์');
                         } else {
                             if (timestring >= 83000 && timestring <= 173000) {
